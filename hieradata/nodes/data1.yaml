@@ -1,0 +1,28 @@
+classes:
+ - graphite_web
+carbon::caches:
+  'a':
+    local_data_dir: '/mnt'
+    line_receiver_port: 2103
+    pickle_receiver_port: 2104
+    cache_query_port: 7102
+    carbon_metric_interval: 1
+    max_creates_per_minute: 'inf'
+  'b':
+    local_data_dir: '/mnt'
+    line_receiver_port: 2203
+    pickle_receiver_port: 2204
+    cache_query_port: 7202
+    carbon_metric_interval: 1
+    max_creates_per_minute: 'inf'
+carbon::relays:
+  'a':
+    line_receiver_port: 2003
+    relay_method: 'consistent-hashing'
+    destinations:
+      - 127.0.0.1:2104:a
+      - 127.0.0.1:2204:b
+graphite_web::carbonlink_hosts:
+ - 127.0.0.1:7102:a
+ - 127.0.0.1:7202:b
+graphite_web::whisper_dir: '/mnt'

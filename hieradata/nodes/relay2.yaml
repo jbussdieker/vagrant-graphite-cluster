@@ -1,0 +1,7 @@
+carbon::relays:
+  'relay':
+    line_receiver_port: 2003
+    relay_method: 'consistent-hashing'
+    destinations:
+      - data1:2104
+      - data2:2204

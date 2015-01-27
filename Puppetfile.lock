@@ -1,0 +1,50 @@
+FORGE
+  remote: https://forgeapi.puppetlabs.com
+  specs:
+    jfryman-nginx (0.2.2)
+      puppetlabs-apt (< 2.0.0, >= 1.0.0)
+      puppetlabs-concat (< 2.0.0, >= 1.1.1)
+      puppetlabs-stdlib (< 5.0.0, >= 4.2.0)
+    puppetlabs-apt (1.7.0)
+      puppetlabs-stdlib (>= 2.2.1)
+    puppetlabs-concat (1.1.2)
+      puppetlabs-stdlib (< 5.0.0, >= 3.2.0)
+    puppetlabs-git (0.3.0)
+      puppetlabs-vcsrepo (>= 0.1.0)
+    puppetlabs-stdlib (4.5.1)
+    puppetlabs-vcsrepo (1.2.0)
+    zooz-uwsgi (0.0.1)
+
+GIT
+  remote: git://github.com/jbussdieker/puppet-carbon.git
+  ref: master
+  sha: f6efcd94a1a401a28ec0155c558f865fbee75c5f
+  specs:
+    jbussdieker-carbon (0.0.1)
+      puppetlabs-concat (>= 1.1.0)
+      puppetlabs-stdlib (>= 3.0.0)
+      puppetlabs-vcsrepo (>= 1.0.0)
+
+GIT
+  remote: git://github.com/jbussdieker/puppet-graphite_web.git
+  ref: master
+  sha: 8359722078b77b5ba0ae3503cdc270b0d4708d8f
+  specs:
+    jbussdieker-graphite_web (0.0.1)
+
+GIT
+  remote: git://github.com/jbussdieker/puppet-whisper.git
+  ref: master
+  sha: 3e66532e8578e71940a5d844f311049aafa453c3
+  specs:
+    jbussdieker-whisper (0.0.1)
+
+DEPENDENCIES
+  jbussdieker-carbon (>= 0)
+  jbussdieker-graphite_web (>= 0)
+  jbussdieker-whisper (>= 0)
+  jfryman-nginx (>= 0)
+  puppetlabs-git (>= 0)
+  puppetlabs-vcsrepo (>= 0)
+  zooz-uwsgi (>= 0)
+

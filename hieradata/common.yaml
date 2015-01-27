@@ -1,0 +1,37 @@
+classes:
+ - git
+ - whisper
+ - carbon
+ - collectd
+carbon::revision: '0.9.13-pre1'
+carbon::schemas:
+  'carbon':
+    pattern: '^carbon\.'
+    retentions: '1s:1d' # Should match carbon metric_interval
+  'collectd':
+    pattern: '^collectd\.'
+    retentions: '1s:1d'
+  'krux':
+    pattern: '^krux\.'
+    retentions: '1s:6h,1m:15d,10m:5y'
+  'default_1sec_for_1day':
+    pattern: '.*'
+    retentions: '1s:1d'
+    order: 99
+collectd::fqdn_lookup: false
+collectd::interval: 1
+graphite_web::revision: '0.9.13-pre1'
+whisper::ensure: '0.9.13'
+hosts:
+  'data1':
+    ip: '10.249.135.31'
+  'data2':
+    ip: '10.190.146.13'
+  'frontend1':
+    ip: '10.249.131.147'
+  'frontend2':
+    ip: '10.249.138.2'
+  'relay1':
+    ip: '10.190.154.154'
+  'relay2':
+    ip: '10.250.18.176'

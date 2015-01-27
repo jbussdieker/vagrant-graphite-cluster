@@ -1,0 +1,7 @@
+---
+  :access_key_id: AKIAZZZZZZZZZZZZZ
+  :secret_access_key: ASDFASDFASDFASDFASDF
+  :ami: ami-3d50120d
+  :instance_type: m3.medium
+  :region: us-west-2
+  :keypair_name: default

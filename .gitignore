@@ -1,0 +1,5 @@
+/.vagrant/
+/.librarian/
+/.tmp/
+/modules
+/config/aws.yaml

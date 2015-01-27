@@ -1,0 +1,6 @@
+classes:
+ - graphite_web
+graphite_web::cluster_servers:
+ - data1:8080
+ - data2:8080
+collectd::graphite_host: relay1
