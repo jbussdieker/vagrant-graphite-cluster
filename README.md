@@ -1,1 +1,1 @@
-
+http://frontend1:8080/render/?width=806&height=470&_salt=1422415496.285&from=-5minutes&target=groupByNode(collectd.*.cpu-*.cpu-idle%2C1%2C%27averageSeries%27)&target=secondYAxis(stacked(carbon.agents.data*-*.metricsReceived))&yMinLeft=0&yMaxLeft=100&yMinRight=0
