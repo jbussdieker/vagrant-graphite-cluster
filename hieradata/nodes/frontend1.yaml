@@ -3,4 +3,5 @@ classes:
 graphite_web::cluster_servers:
  - data1:8080
  - data2:8080
+graphite_web::time_zone: 'America/Los_Angeles'
 collectd::graphite_host: relay1

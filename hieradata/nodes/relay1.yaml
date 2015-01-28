@@ -3,5 +3,5 @@ carbon::relays:
     line_receiver_port: 2003
     relay_method: 'consistent-hashing'
     destinations:
-      - data1:2104
-      - data2:2204
+      - data1:2004
+      - data2:2004
