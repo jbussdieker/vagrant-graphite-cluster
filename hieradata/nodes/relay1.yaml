@@ -2,6 +2,7 @@ carbon::relays:
   'relay':
     line_receiver_port: 2003
     relay_method: 'consistent-hashing'
+    carbon_metric_interval: 1
     destinations:
       - data1:2104:a
       - data1:2204:b
