@@ -15,6 +15,15 @@ carbon::caches:
     cache_query_port: 7202
     carbon_metric_interval: 1
     max_creates_per_minute: 'inf'
+carbon::relays:
+  'relay':
+    line_receiver_port: 2003
+    pickle_receiver_port: 2004
+    relay_method: 'consistent-hashing'
+    carbon_metric_interval: 1
+    destinations:
+      - 127.0.0.1:2104:a
+      - 127.0.0.1:2204:b
 graphite_web::carbonlink_hosts:
  - 127.0.0.1:7102:a
  - 127.0.0.1:7202:b

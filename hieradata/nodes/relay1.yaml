@@ -4,7 +4,5 @@ carbon::relays:
     relay_method: 'consistent-hashing'
     carbon_metric_interval: 1
     destinations:
-      - data1:2104:a
-      - data1:2204:b
-      - data2:2104:a
-      - data2:2204:b
+      - data1:2004
+      - data2:2004
