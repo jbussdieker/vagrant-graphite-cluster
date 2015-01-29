@@ -33,6 +33,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     override.vm.box = "dummy"
   end
 
+  config.vm.provision "shell", inline: "apt-get -y update"
+  config.vm.provision "shell", inline: "apt-get -y install puppet"
+
   # Puppet Provisioner Config
   config.vm.provision "puppet" do |puppet|
     puppet.manifests_path = "manifests"
@@ -58,8 +61,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 #cloud-config
 hostname: #{name}
 manage_etc_hosts: localhost
-packages:
-- puppet
 EOS
       end
     end
